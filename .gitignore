@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.local
+.env.production
+
+# logs
+logs/
+*.log
+
+# build folders
+dist/
+build/
+target/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+
+# Python
+__pycache__/
+*.pyc
+venv/

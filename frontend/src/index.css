@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root {
+
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --bg-elevated: #111111;
+
+  --bg-card: rgba(16,16,16,0.92);
+  --bg-glass: rgba(20,20,20,0.65);
+
+  --border-subtle: rgba(255,255,255,0.04);
+  --border-default: rgba(255,255,255,0.07);
+  --border-accent: rgba(34,197,94,0.22);
+
+  --accent: #22c55e;
+  --accent-bright: #4ade80;
+  --accent-dim: rgba(34,197,94,0.12);
+  --accent-glow: rgba(34,197,94,0.18);
+
+  --danger: #ef4444;
+  --danger-dim: rgba(239,68,68,0.10);
+
+  --text-primary: #f3f3f3;
+  --text-secondary: #7a7a7a;
+  --text-muted: #4b4b4b;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+
+  background: var(--bg-primary);
+
+  background-image:
+    radial-gradient(
+      ellipse 60% 40% at 10% 5%,
+      rgba(34,197,94,0.06) 0%,
+      transparent 60%
+    ),
+
+    radial-gradient(
+      ellipse 40% 30% at 90% 90%,
+      rgba(74,222,128,0.03) 0%,
+      transparent 50%
+    );
+
+  color: var(--text-primary);
+
+  font-family: 'Outfit', sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #1f1f1f;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: rgba(34,197,94,0.22);
+  color: #ffffff;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(0.88);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease infinite;
+}
+
+/* =========================================
+   DELAYS
+========================================= */
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+.glass {
+
+  background: var(--bg-glass);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid var(--border-default);
+}
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.card-hover {
+
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
+}
+
+.card-hover:hover {
+
+  border-color: rgba(34,197,94,0.18);
+
+  box-shadow:
+    0 0 40px rgba(34,197,94,0.04);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TEXTURES
+========================================= */
+
+.grid-texture {
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+}
+
+.dot-pattern {
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 24px 24px;
+}
+
+/* =========================================
+   GRADIENT TEXT
+========================================= */
+
+.gradient-text {
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e 0%,
+      #4ade80 50%,
+      #86efac 100%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================
+   ACCENT LINE
+========================================= */
+
+.accent-line {
+
+  height: 1px;
+
+  opacity: 0.35;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      transparent
+    );
+}
+
+/* =========================================
+   NOISE OVERLAY
+========================================= */
+
+.noise::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  border-radius: inherit;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,15 @@
+to Start this project :
+move to backend : cd backend 
+
+then run : ./mvnw spring-boot:run
+
+if anything goes worng refresh by using : ./mvnw clean 
+
+even not working delete this folder backend/target and run this command : ./mvnw clean install  
+
+then go to frontend : cd frontend 
+
+then run : npm run dev 
+
+
+for public users to see status : http://localhost:5173/status
