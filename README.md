@@ -391,3 +391,13 @@ Multi-region monitoring
 Prometheus metrics
 Grafana dashboards
 Kafka queues
+
+
+Dashboard :
+
+<img width="1920" height="968" alt="image" src="https://github.com/user-attachments/assets/60aec0bd-2b5c-43f0-bd3a-f12d27089ee8" />
+
+Monitors :
+
+<img width="1920" height="969" alt="{B844BDB0-31CA-4778-BFED-C643BFFA6D89}" src="https://github.com/user-attachments/assets/d6aab48e-17e7-4ad4-a679-6a7cb6de30c4" />
+
